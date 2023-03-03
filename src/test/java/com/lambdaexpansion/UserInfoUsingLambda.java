@@ -9,6 +9,11 @@ public class UserInfoUsingLambda {
         Matcher matcher = pattern.matcher(str);
         return matcher.matches();
     };
+    LastNameCheck lastName =(str)->{
+        Pattern pattern =Pattern.compile("^[A-Z]{1}+)[A-Za-z]{2,}$");
+        Matcher matcher=pattern.matcher(str);
+        return  matcher.matches();
+    };
 
     public static void main(String[] args) {
         System.out.println("Welcome to User Info Using Lambda master branch");
